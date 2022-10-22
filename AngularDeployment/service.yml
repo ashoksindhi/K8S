@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: angular-service
 spec:
+  type: NodePort
   selector:
     app: angular-deployment
   ports:
