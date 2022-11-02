@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: angular-deployment
+  name: web
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: web
@@ -15,9 +15,5 @@ spec:
       containers:
       - name: angular-app
         image: ashoksindhi1981/sample-app
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 80
